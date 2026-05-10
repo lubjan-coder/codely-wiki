@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactions Python | Codely</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        code { font-family: 'Fira Code', monospace; }
+        .gradient-text { background: linear-gradient(90deg, #10b981, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(51, 65, 85, 1); }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-300">
+
+    <nav class="flex items-center justify-between px-12 py-6 sticky top-0 bg-[#0f172a]/90 backdrop-blur-md z-50 border-b border-slate-800">
+        <div class="text-2xl font-extrabold text-white">Code<span class="text-blue-500">ly</span>.</div>
+        <div class="flex gap-8 text-sm font-semibold">
+            <a href="../index.html" class="hover:text-white transition">Accueil</a>
+            <a href="variables.html" class="hover:text-white transition">Variables</a>
+            <a href="boucles.html" class="hover:text-white transition">Boucles</a>
+            <a href="interactions.html" class="text-emerald-400 border-b-2 border-emerald-400">Interactions</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <header class="mb-16 text-center">
+            <h1 class="text-5xl font-extrabold text-white mb-6">Communiquer : <span class="gradient-text italic">Print & Input</span></h1>
+            <p class="text-lg text-slate-400">Apprends à faire parler ton programme et à écouter tes utilisateurs.</p>
+        </header>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <span class="text-emerald-500">#</span> Afficher : <code class="text-emerald-400">print()</code>
+            </h2>
+            <div class="stat-card p-6 rounded-2xl mb-6">
+                <p class="leading-relaxed">
+                    C'est la fonction la plus utilisée. Elle permet d'afficher du texte ou le contenu d'une variable dans la console (l'écran noir).
+                </p>
+            </div>
+            
+            <div class="bg-[#0b1222] rounded-2xl p-6 border border-slate-800">
+                <pre class="text-sm md:text-base leading-relaxed">
+<span class="text-purple-400">print</span>(<span class="text-emerald-400">"Bonjour tout le monde !"</span>)
+
+score = <span class="text-orange-400">50</span>
+<span class="text-purple-400">print</span>(<span class="text-emerald-400">"Ton score est de :"</span>, score)</pre>
+            </div>
+        </section>
+
+        <div class="my-8">
+            
+        </div>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <span class="text-emerald-500">#</span> Récupérer : <code class="text-emerald-400">input()</code>
+            </h2>
+            <div class="stat-card p-6 rounded-2xl mb-6 border-l-4 border-emerald-500">
+                <p class="leading-relaxed">
+                    <strong>Input</strong> permet de poser une question à l'utilisateur. Le programme s'arrête et attend que l'utilisateur tape quelque chose et appuie sur Entrée.
+                </p>
+            </div>
+
+            <div class="bg-[#0b1222] rounded-2xl p-6 border border-slate-800">
+                <div class="text-xs text-slate-500 mb-2 uppercase font-bold tracking-widest">Exemple : Demander le nom</div>
+                <pre class="text-sm md:text-base leading-relaxed">
+nom = <span class="text-purple-400">input</span>(<span class="text-emerald-400">"Comment t'appelles-tu ? "</span>)
+<span class="text-purple-400">print</span>(<span class="text-emerald-400">"Salut"</span>, nom, <span class="text-emerald-400">"!"</span>)</pre>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-blue-600 rounded-3xl p-8 relative overflow-hidden shadow-xl">
+                <h3 class="text-white font-bold text-xl mb-3">Attention : Le piège du texte ! ⚠️</h3>
+                <p class="text-blue-100 text-sm leading-relaxed">
+                    Par défaut, <code class="bg-blue-800 px-1 rounded">input()</code> transforme tout en texte (String). Si tu veux demander un nombre pour faire un calcul, tu dois le convertir avec <code class="bg-blue-800 px-1 rounded text-white italic">int()</code> :
+                </p>
+                <div class="mt-4 bg-[#0b1222]/50 p-4 rounded-xl text-xs font-mono text-blue-200 border border-blue-400/30">
+                    age = <span class="text-yellow-400 italic">int</span>(input("Ton age ? "))<br>
+                    prochain_age = age + 1
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-20 pt-10 border-t border-slate-800">
+            <a href="../index.html" class="text-blue-500 hover:underline">← Retourner à l'accueil</a>
+        </footer>
+    </main>
+</body>
+</html>

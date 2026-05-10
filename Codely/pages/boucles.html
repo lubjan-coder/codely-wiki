@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoir : Les Boucles | Codely</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        code { font-family: 'Fira Code', monospace; }
+        .gradient-text { background: linear-gradient(90deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(51, 65, 85, 1); }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-300">
+
+    <nav class="flex items-center justify-between px-12 py-6 sticky top-0 bg-[#0f172a]/90 backdrop-blur-md z-50 border-b border-slate-800">
+        <div class="text-2xl font-extrabold text-white">Code<span class="text-blue-500">ly</span>.</div>
+        <div class="flex gap-8 text-sm font-semibold">
+            <a href="../index.html" class="hover:text-white transition">Accueil</a>
+            <a href="variables.html" class="hover:text-white transition">Variables</a>
+            <a href="boucles.html" class="text-yellow-500 border-b-2 border-yellow-400">Boucles</a>
+            <a href="interactions.html" class="hover:text-white transition">Interactions</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <header class="mb-12 text-center">
+            <h1 class="text-5xl font-extrabold text-white mb-6 italic">Le Savoir des <span class="gradient-text">Boucles</span></h1>
+            <p class="text-lg text-slate-400">Automatiser les répétitions pour gagner du temps.</p>
+        </header>
+
+        <section class="mb-12 bg-[#1e293b] p-8 rounded-3xl border border-slate-700">
+            <h2 class="text-2xl font-bold text-yellow-400 mb-4 flex items-center gap-2 italic">1. La boucle FOR</h2>
+            <p class="mb-4">Elle sert à parcourir une série d'éléments ou à répéter une action un nombre précis de fois.</p>
+            <div class="bg-[#0b1222] p-6 rounded-2xl border border-slate-800 font-mono text-yellow-100 mb-4">
+                for i in range(10):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("Ceci est la ligne n°", i)
+            </div>
+            <p class="text-sm text-slate-500">Note : <code>range(10)</code> va de 0 à 9 (soit 10 répétitions).</p>
+        </section>
+
+        
+
+        <section class="mb-12 bg-[#1e293b] p-8 rounded-3xl border border-slate-700">
+            <h2 class="text-2xl font-bold text-yellow-400 mb-4 italic">2. La boucle WHILE</h2>
+            <p class="mb-4">Elle répète une action **tant que** une condition est vraie. C'est idéal pour les menus de jeux ou les systèmes de combat.</p>
+            <div class="bg-[#0b1222] p-6 rounded-2xl border border-slate-800 font-mono text-yellow-100">
+                continuer = True<br>
+                while continuer == True:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;reponse = input("Continuer ? o/n")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if reponse == "n":<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continuer = False
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-red-500/10 border border-red-500/50 p-6 rounded-2xl">
+                <h3 class="text-red-400 font-bold mb-2 uppercase text-xs">⚠️ Loi de Python : L'indentation</h3>
+                <p class="text-sm">Tout ce qui est à l'intérieur d'une boucle doit être décalé par **4 espaces** (ou une tabulation). Sans cela, le code ne fonctionnera pas.</p>
+            </div>
+        </section>
+
+        <footer class="text-center mt-20 pt-10 border-t border-slate-800 text-sm text-slate-500">
+            Codely Archive - Page Boucles
+        </footer>
+    </main>
+</body>
+</html>
